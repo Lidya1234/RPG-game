@@ -1,7 +1,7 @@
 const path = require('path');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+//const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
@@ -9,7 +9,7 @@ module.exports = {
       },
   output: {
     filename: 'app.bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
   },
 
   module: {
@@ -39,7 +39,7 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
+    //new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Output Management',
     }),
@@ -58,8 +58,12 @@ module.exports = {
   ],
 
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, 'build'),
   },
-
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+},
 
 };
