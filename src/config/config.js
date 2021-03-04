@@ -1,14 +1,16 @@
+import 'phaser';
+ 
 export default {
-    
-    width: 256,
-    height: 272,
-    backgroundColor: 0x000000,
-    physics:
-    {
-        default: "arcade",
-        arcade: {
-            debug: false
-        }
-    },
-   pixelArt: true
-  };
+  type: Phaser.AUTO,
+  parent: 'content',
+  width: 800,
+  height: 600,
+  zoom: 1,
+  pixelArt: true,
+  physics: {
+      default: 'arcade',
+      arcade: {
+          gravity: { y: 0 }
+      }
+  }
+};

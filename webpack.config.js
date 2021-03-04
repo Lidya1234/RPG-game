@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 //const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
     entry: {
         app: './src/index.js'
@@ -65,5 +66,17 @@ module.exports = {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000
 },
+
+optimization: {
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          output: {
+            comments: false
+          }
+        }
+      })
+    ]
+  }
 
 };

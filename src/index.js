@@ -1,32 +1,31 @@
 import 'phaser';
-import config from './config/config';
+import Model from './Model'
+import config from './Config/config';
+import GameScene from './Scenes/GameScene';
+import BootScene from './Scenes/BootScene';
+import PreloaderScene from './Scenes/PreloaderScene';
+import TitleScene from './Scenes/TitleScene';
+import OptionsScene from './Scenes/OptionsScene';
+import CreditsScene from './Scenes/CreditsScene';
 
-import { Scene1 } from './scenes/scene1';
-import { Scene2 } from './scenes/scene2';
+ 
+class Game extends Phaser.Game {
+  constructor () {
+    super(config);
+const model = new Model();
 
-// const gameConfig = {
-//   width: 250,
-//   height: 272,
-//   backgroundColor: 0x000000,
-//   scene: 
-//   [Scene1, Scene2
-//   ],
-//  pixelArt: true
-// };
-class Game extends Phaser.Game
- {
-   constructor()
-   {
-     super(config)
-     this.scene.add('bootGame' ,Scene1);
-     this.scene.add('playGame' ,Scene2);
-     this.scene.start('bootGame')
-   }
-   
- }
+this.globals = { model, bgMusic: null };
+    this.scene.add('Boot', BootScene);
+    this.scene.add('Preloader', PreloaderScene);
+    this.scene.add('Title', TitleScene);
+    this.scene.add('Options', OptionsScene);
+    this.scene.add('Credits', CreditsScene);
+    this.scene.add('Game', GameScene);
+    this.scene.start('Boot');
+  }
+}
+ 
 
- window.onload = () =>
- {
    window.game =new Game();
- }
+
 
