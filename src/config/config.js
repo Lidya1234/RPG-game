@@ -5,7 +5,7 @@ export default {
   parent: 'content',
   width: 800,
   height: 600,
-  zoom: 1,
+
   pixelArt: true,
   physics: {
       default: 'arcade',

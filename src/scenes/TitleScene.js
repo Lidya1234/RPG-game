@@ -15,7 +15,8 @@ export default class TitleScene extends Phaser.Scene {
     this.load.image('tiles', 'assets/tiles/tiles.png')
 		this.load.tilemapTiledJSON('map', 'assets/tiles/map.JSON')
     this.load.spritesheet('hero', 'assets/spritesheets/ninja.png', { frameWidth: 16, frameHeight: 16 })
-   
+    this.load.spritesheet('enemy', 'assets/spritesheets/power-up.png', { frameWidth: 16, frameHeight: 16 })
+    this.load.spritesheet('enemy', 'assets/spritesheets/explosion.png', { frameWidth: 16, frameHeight: 16 })
   }
  
   create () {
