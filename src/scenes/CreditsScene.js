@@ -1,52 +1,81 @@
 
-import 'phaser';
+/* eslint-disable no-undef */
+import Phaser from 'phaser';
 import config from '../Config/config';
+
+import Button from '../Objects/Button';
+
+
+import Request from './score';
 
 export default class CreditsScene extends Phaser.Scene {
   constructor() {
     super('Credits');
   }
 
+  init(data) {
+    this.finalScore = data.score;
+  }
 
   create() {
-    this.creditsText = this.add.text(0, 0, 'Credits', { fontSize: '32px', fill: '#fff' });
-    this.madeByText = this.add.text(0, 0, 'Created By: Placeholder', { fontSize: '26px', fill: '#fff' });
-    this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
+    // add text
+    this.add
+      .text(
+        this.scale.width * 0.5,
+        this.scale.height * 0.1,
+        'Game Over | Save Score',
+        {
+          fontSize: 48,
+          color: '#00f',
+        },
+      )
+      .setOrigin();
+    this.add
+      .text(
+        this.scale.width * 0.5,
+        this.scale.height * 0.2,
+        `Final score: ${this.finalScore}`,
+        { fontSize: 24 },
+      )
+      .setOrigin();
 
-    Phaser.Display.Align.In.Center(
-      this.creditsText,
-      this.zone,
-    );
+    // submit score
+    const form = document.createElement('form');
+    form.innerHTML = `
+        <div class="form-group d-flex">
+          <input class="player" type="text" name="name" placeholder="Enter your name" required minLength="3" maxLength="10" autofocus/>
+          <button class="btn btn-info btn-save-score" type="submit">Submit</button>
+        </div>
+    `;
+    this.add.dom(this.scale.width * 0.1, 10, form);
 
-    Phaser.Display.Align.In.Center(
-      this.madeByText,
-      this.zone,
-    );
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const user = document.querySelector('.player').value.trim();
+      const score = this.finalScore;
 
-    this.madeByText.setY(1000);
+      const request = new Request();
 
-
-    this.creditsTween = this.tweens.add({
-      targets: this.creditsText,
-      y: -100,
-      ease: 'Power1',
-      duration: 3000,
-      delay: 1000,
-      onComplete() {
-        this.destroy;
-      },
+      request
+        .saveScore(user, score)
+        .then(() => {
+          this.scene.start('Board');
+        })
+        .catch(() => {
+          this.add
+            .text(
+              this.scale.width * 0.5,
+              this.scale.height * 0.8,
+              'Network Error. Please try again later.',
+            )
+            .setOrigin();
+        });
     });
 
-    this.madeByTween = this.tweens.add({
-      targets: this.madeByText,
-      y: -300,
-      ease: 'Power1',
-      duration: 8000,
-      delay: 1000,
-      onComplete: function () {
-        this.madeByTween.destroy;
-        this.scene.start('Title');
-      }.bind(this),
-    });
+    this.gameButton = new Button(this,
+      config.width / 2 ,
+      config.height / 2 +200,
+      'blueButton1', 'blueButton2',
+      'LeaderBord', 'Board');
   }
 }

@@ -1,46 +1,62 @@
-const submitScore = async (userName, scoreValue) => {
-    const submit = {
-      user: userName,
-      score: scoreValue,
-    };
-    const post = JSON.stringify(submit);
-    const address = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/v0dBe5h2YSNkGvmIZjrt/scores/';
-    const settings = {
+// eslint-disable-next-line no-unused-vars
+export default class Request {
+  constructor() {
+    this.gameId = 'Zl4d7IVkemOTTVg2fUdz';
+    this.baseURI = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+  }
+
+  async createGame() {
+    const gameName = { name: 'Turn based RPG game' };
+    const response = await fetch(this.baseURI, {
       method: 'POST',
       headers: {
-        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: post,
-    };
-    const response = await fetch(address, settings);
-    const answer = await response.json();
-    return answer;
-  };
-  
-  
-  const sorting = (obj) => {
-    const array = [];
-    for (let i = 0; i < obj.length; i += 1) {
-      array.push([obj[i].score, obj[i].user]);
+      body: JSON.stringify(gameName),
+    });
+
+    if (response.status !== 201) {
+      return new Error('Unable to create a Game Object');
     }
-    return Array.from(array).sort((a, b) => b[0] - a[0]);
-  };
-  
-  const getScoreBoard = async () => {
-    const address = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/v0dBe5h2YSNkGvmIZjrt/scores/';
-    const settings = {
-      method: 'GET',
+
+    const gameId = await response.json();
+    return gameId;
+  }
+
+  async saveScore(user, score) {
+    const gameScoresURI = `${this.baseURI}:${this.gameId}/scores`;
+    const playerScore = {
+      user,
+      score,
+    };
+
+
+    const response = await fetch(gameScoresURI, {
+      method: 'POST',
       headers: {
-        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-    };
-  
-    const response = await fetch(address, settings);
-    const answer = await response.json();
-  
-    return sorting(answer.result);
-  };
-  export { submitScore, getScoreBoard };
-  
+      body: JSON.stringify(playerScore),
+    });
+
+    if (response.status !== 201) {
+      return new Error('Unable to save player score');
+    }
+
+    const data = await response.json();
+    return data;
+  }
+
+  async getAllPlayers() {
+    const gameScoresURI = `${this.baseURI}:${this.gameId}/scores`;
+
+    const response = await fetch(gameScoresURI);
+
+    if (response.status !== 200) {
+      return new Error('Unable to save player score');
+    }
+
+    const data = await response.json();
+    return data;
+  }
+}
