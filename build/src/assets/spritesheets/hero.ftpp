@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "version": "0.6.6"
+  },
+  "savePath": "D:\\Microverse projects\\javascript\\RPG-game\\build\\assets\\spritesheets",
+  "images": [
+    {
+      "name": "character.png",
+      "path": "D:/Microverse projects/javascript/RPG-game/build/assets/spritesheets/character.png",
+      "folder": ""
+    }
+  ],
+  "folders": [],
+  "packOptions": {
+    "textureName": "hero",
+    "textureFormat": "png",
+    "removeFileExtension": false,
+    "prependFolderName": true,
+    "base64Export": false,
+    "tinify": false,
+    "tinifyKey": "1",
+    "scale": 1,
+    "disableSmoothing": false,
+    "filter": "none",
+    "exporter": "JSON (hash)",
+    "fileName": "pack-result",
+    "savePath": "D:\\Microverse projects\\javascript\\RPG-game\\build\\assets\\spritesheets",
+    "width": 2048,
+    "height": 2048,
+    "fixedSize": false,
+    "powerOfTwo": false,
+    "padding": 0,
+    "extrude": 0,
+    "allowRotation": true,
+    "allowTrim": true,
+    "trimMode": "trim",
+    "alphaThreshold": "0",
+    "detectIdentical": true,
+    "packer": "MaxRectsBin",
+    "packerMethod": "BestShortSideFit"
+  }
+}
