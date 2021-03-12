@@ -1,9 +1,8 @@
 
-  
 /* eslint-disable no-unused-expressions */
 /* eslint-disable import/no-extraneous-dependencies */
 import 'babel-polyfill';
-import Request from './score';
+import Request from '../Scenes/score';
 
 require('jest-fetch-mock').enableMocks();
 

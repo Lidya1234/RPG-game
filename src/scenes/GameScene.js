@@ -8,7 +8,6 @@ let Player2Score;
 let score;
 
 
-
 export default class GameScene extends Phaser.Scene {
   constructor() {
     super('Game');
@@ -253,14 +252,12 @@ export default class GameScene extends Phaser.Scene {
     if (Phaser.Input.Keyboard.JustDown(this.spacebar)) {
       if (this.counter === 0) {
         this.counter = 1;
-        this.hero.x= 30;
-        this.hero.y=40;
-  
+        this.hero.x = 30;
+        this.hero.y = 40;
       } else {
         this.counter = 0;
-        this.hero2.x= 40;
-        this.hero2.y=40;
-      
+        this.hero2.x = 40;
+        this.hero2.y = 40;
       }
     }
   }

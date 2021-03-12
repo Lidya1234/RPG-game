@@ -41,6 +41,5 @@ export default class LeadersBoardScene extends Phaser.Scene {
 
 
     this.gameButton = new Button(this, config.width / 2, config.height / 2 + 200, 'blueButton1', 'blueButton2', 'Restart', 'Game');
-
   }
 }

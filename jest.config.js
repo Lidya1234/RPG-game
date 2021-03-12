@@ -1,10 +1,5 @@
-module.exports = async () => {
- 
-  
-  return {
-    verbose: true,
-    rootDir: "src/test",
-    //"projects": ["<rootDir>", "<rootDir>/src/test/*"]
-  };
-
-};
+module.exports = async () => ({
+  verbose: true,
+  rootDir: 'src/test',
+  // "projects": ["<rootDir>", "<rootDir>/src/test/*"]
+});

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-import BootScene from '../Scenes/CreditsScene';
+import CreditsScene from '../Scenes/CreditsScene';
 
 const creditsScene = new CreditsScene();
 
