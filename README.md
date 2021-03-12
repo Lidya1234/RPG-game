@@ -17,22 +17,22 @@ I have created a turn-based RPG game using phaser, javascript, and HTML5.With tw
 
 -To play this game online click [here](https://romantic-albattani-29c047.netlify.app/)
 
-PreloaderScene :
-- Will load all the assets needed for the game scene and it will show the progress until it loads everything.
-- Then it will pass you to the title scene which has a play button that opens the game scene.
+
+- PreloaderScene :Will load all the assets needed for the game scene and it will show the progress until it loads everything.
+- Then it will redirect you to the title scene which has a play button that opens the game scene.
 - The game scene is the main scene where you play the game.
-- In the game, there are two characters and also balls the goes in all direction.
+- In the game, there are two characters and also balls the moves in all direction.
 - These balls disappear if they overlap with any of those two characters.
 - The characters are the players 
-- Since this is a turn-based game the players have idele and active states
+- Since this is a turn-based game the players have idle and active states
 - One can change the state of a character using the spacebar.
 - When all the balls disappear it will take you to the credits scene.
-- In the credits scene it will tell the final score which is the highest of the two scores.
+- In the credits scene it will display the final score which is the highest of the two scores displayed in the game scene.
 - And there is a form where you can fill in the username and click submit
 - It will submit the final score and the username to the leaderboard API.
 - At the bottom there is a leaderboard button click it.
-- The button will take you to the leaderboard scene.
-- Then you will see a list of users with their scores and rank. 
+- Clicking the button will take you to the leaderboard scene.
+- Then you will see a list of users with their scores and rank displayed. 
 
 
 
