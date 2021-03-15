@@ -166,21 +166,19 @@ export default class GameScene extends Phaser.Scene {
 
 
   update() {
-    //    this.controls.update(delta);
     this.hero.body.setVelocity(0);
     this.hero2.body.setVelocity(0);
     if (this.counter === 0) {
       this.cameras.main.startFollow(this.hero, true);
 
 
-      // Horizontal movement
       if (this.cursors.left.isDown) {
         this.hero.body.setVelocityX(-80);
       } else if (this.cursors.right.isDown) {
         this.hero.body.setVelocityX(80);
       }
 
-      // Vertical movement
+
       if (this.cursors.up.isDown) {
         this.hero.body.setVelocityY(-80);
       } else if (this.cursors.down.isDown) {
@@ -212,14 +210,12 @@ export default class GameScene extends Phaser.Scene {
       this.cameras.main.startFollow(this.hero2, true);
 
 
-      // Horizontal movement
       if (this.cursors.left.isDown) {
         this.hero2.body.setVelocityX(-80);
       } else if (this.cursors.right.isDown) {
         this.hero2.body.setVelocityX(80);
       }
 
-      // Vertical movement
       if (this.cursors.up.isDown) {
         this.hero2.body.setVelocityY(-80);
       } else if (this.cursors.down.isDown) {

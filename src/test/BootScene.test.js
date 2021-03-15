@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 
 import BootScene from '../Scenes/BootScene';
 

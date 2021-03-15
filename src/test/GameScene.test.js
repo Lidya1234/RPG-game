@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 
 import GameScene from '../Scenes/GameScene';
 
