@@ -30,11 +30,11 @@ module.exports = {
     ],
   },
   watch: true,
-  devServer: {
+  // devServer: {
 
-    contentBase: path.resolve(__dirname, 'build'),
+  //   contentBase: path.resolve(__dirname, 'build'),
 
-    port: 8080,
+  //   port: 8080,
 
-  },
+  // },
 };
