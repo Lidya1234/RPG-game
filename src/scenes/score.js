@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+
 export default class Request {
   constructor() {
     this.gameId = 'Zl4d7IVkemOTTVg2fUdz';
