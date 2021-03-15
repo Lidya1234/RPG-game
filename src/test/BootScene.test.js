@@ -1,6 +1,6 @@
-
+/* eslint-disable import/no-unresolved */
 import BootScene from '../Scenes/BootScene';
-
+/* eslint-enable import/no-unresolved */
 const bootScene = new BootScene();
 
 test('bootScene is of type an object', () => {

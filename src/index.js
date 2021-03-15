@@ -1,3 +1,5 @@
+
+/* eslint-disable import/no-unresolved */
 import Phaser from 'phaser';
 import './main.scss';
 import config from './Config/config';
@@ -10,6 +12,7 @@ import CreditsScene from './Scenes/CreditsScene';
 import LeaderBoardScene from './Scenes/LeaderBoardScene';
 
 
+/* eslint-enable import/no-unresolved */
 class Game extends Phaser.Game {
   constructor() {
     super(config);

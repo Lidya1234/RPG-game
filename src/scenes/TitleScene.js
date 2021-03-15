@@ -1,6 +1,8 @@
+/* eslint-disable import/no-unresolved */
 import Phaser from 'phaser';
 import config from '../Config/config';
 import Button from '../Objects/Button';
+/* eslint-enable import/no-unresolved */
 
 
 export default class TitleScene extends Phaser.Scene {

@@ -1,9 +1,9 @@
-
+/* eslint-disable import/no-unresolved */
 import Phaser from 'phaser';
 import config from '../Config/config';
 import Request from './score';
 import Button from '../Objects/Button';
-
+/* eslint-enable import/no-unresolved */
 export default class LeadersBoardScene extends Phaser.Scene {
   constructor() {
     super('Board');

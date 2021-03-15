@@ -1,9 +1,9 @@
-
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable import/no-extraneous-dependencies */
 import 'babel-polyfill';
 import Request from '../Scenes/score';
-
+/* eslint-enable import/no-unresolved */
 require('jest-fetch-mock').enableMocks();
 
 // eslint-disable-next-line no-unused-vars

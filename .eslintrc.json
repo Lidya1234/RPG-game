@@ -14,9 +14,8 @@
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
-    "arrow-parens": "off",
-    "import/no-unresolved": "off",
-    "import/extensions": "off"
+    "arrow-parens": "off"
+   
 
   },
   "ignorePatterns": [

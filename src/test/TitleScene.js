@@ -1,6 +1,6 @@
-
+/* eslint-disable import/no-unresolved */
 import TitleScene from '../Scenes/TitleScene';
-
+/* eslint-enable import/no-unresolved */
 const boardScene = new TitleScene();
 
 test('bootScene is of type an object', () => {

@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
-
+/* eslint-disable import/no-unresolved */
 import config from '../Config/config';
-
+/* eslint-enable import/no-unresolved */
 
 let Player1Score;
 let Player2Score;
