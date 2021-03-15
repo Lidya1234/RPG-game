@@ -1,15 +1,14 @@
 
-/* eslint-disable import/no-unresolved */
 import Phaser from 'phaser';
 import './main.scss';
-import config from './Config/config';
-import GameScene from './Scenes/GameScene';
-import BootScene from './Scenes/BootScene';
-import PreloaderScene from './Scenes/PreloaderScene';
-import TitleScene from './Scenes/TitleScene';
+import config from './config/config';
+import GameScene from './scenes/GameScene';
+import BootScene from './scenes/BootScene';
+import PreloaderScene from './scenes/PreloaderScene';
+import TitleScene from './scenes/TitleScene';
 
-import CreditsScene from './Scenes/CreditsScene';
-import LeaderBoardScene from './Scenes/LeaderBoardScene';
+import CreditsScene from './scenes/CreditsScene';
+import LeaderBoardScene from './scenes/LeaderBoardScene';
 
 
 /* eslint-enable import/no-unresolved */

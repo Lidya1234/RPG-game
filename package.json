@@ -11,8 +11,8 @@
       "./setupJest.js"
     ]
   },
- "settings":{
-  "import/resolver": "webpack "
+  "settings": {
+    "import/resolver": "webpack "
   },
   "scripts": {
     "test": "jest",
