@@ -29,5 +29,12 @@ module.exports = {
       },
     ],
   },
-  watch: true,
+  //watch: true,
+  devServer: {
+
+    contentBase: path.resolve(__dirname, 'build'),
+
+    port: 8080
+
+  },
 };

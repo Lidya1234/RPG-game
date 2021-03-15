@@ -64,6 +64,7 @@
 - npm install
 - npm install --only=dev
 - npm start (This is the development mode)
+- It will run in port 8080
 - npm run build (This is the production mode)
 
 # For running the test cases:
