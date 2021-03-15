@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 
 import TitleScene from '../Scenes/TitleScene';
 

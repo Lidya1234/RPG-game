@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 
 import LeaderBoardScene from '../Scenes/LeaderBoardScene';
 

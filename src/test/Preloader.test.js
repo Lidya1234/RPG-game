@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 
 import PreloaderScene from '../Scenes/PreloaderScene';
 
