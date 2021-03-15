@@ -11,6 +11,9 @@
       "./setupJest.js"
     ]
   },
+ "settings":{
+  "import/resolver": "webpack "
+  },
   "scripts": {
     "test": "jest",
     "watch": "jest --watch *.js",

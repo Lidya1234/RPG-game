@@ -5,6 +5,10 @@ module.exports = {
     main: path.resolve(__dirname, './src/index.js'),
     vendor: path.resolve(__dirname, './src/vendor.js'),
   },
+  resolve: {
+
+    extensions: ['*', '.js', '.jsx'], // <-- Here, it works
+  },
 
   module: {
     rules: [

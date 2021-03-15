@@ -1,5 +1,9 @@
 # Turn based RPG Game
-I have created a turn-based RPG game using phaser, javascript, and HTML5.With two characters chasing balls that move in all directions.
+- I have created a turn-based RPG game using phaser, javascript, and HTML5.With two characters chasing balls that move in all directions.
+- The two characters interchange their role when you click the space bar.
+- Player plays the game using the up, down, left, and right cursors.
+- It stores the data in leader board API.
+- It displays the data when the game finishes.
 
 ## Built With
 
