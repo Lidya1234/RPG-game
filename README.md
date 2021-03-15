@@ -3,6 +3,7 @@
 - I am using two characters because this a turn-based RPG game.
 - The two characters interchange their role when you click the space bar.
 - Player plays the game using the up, down, left, and right cursors.
+- The highest score of those two characters scores will be the final score. 
 - It stores the data in leader board API.
 - It displays the data when the game finishes.
 
