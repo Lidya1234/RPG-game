@@ -1,6 +1,6 @@
-/* eslint-disable import/no-unresolved */
-import CreditsScene from '../Scenes/CreditsScene';
-/* eslint-enable import/no-unresolved */
+
+import CreditsScene from '../scenes/CreditsScene';
+
 const creditsScene = new CreditsScene();
 
 test('creditsScene is of type an object', () => {

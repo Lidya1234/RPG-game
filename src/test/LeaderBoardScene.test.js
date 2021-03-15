@@ -1,6 +1,6 @@
-/* eslint-disable import/no-unresolved */
-import LeaderBoardScene from '../Scenes/LeaderBoardScene';
-/* eslint-enable import/no-unresolved */
+
+import LeaderBoardScene from '../scenes/LeaderBoardScene';
+
 const boardScene = new LeaderBoardScene();
 
 test('bootScene is of type an object', () => {
