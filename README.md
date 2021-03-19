@@ -6,7 +6,7 @@
 - The highest score of those two characters scores will be the final score. 
 - It stores the data in leader board API.
 - It displays the data when the game finishes.
-
+<img src='Capture.PNG' />
 ## Built With
 
 - HTML5
